@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import confetti from "canvas-confetti";
 
 const CodewordChallenge = () => {
   const targetWord = "LUGGAGE";
   // Initialize state with an array of empty strings, one for each letter
   const [userInput, setUserInput] = useState(Array(targetWord.length).fill(""));
-
+  const inputRefs = useRef([]);
   /*
     const STAGES = [
     { id: 1, code: "friends", videoId: "VIDEO_ID_1" },
@@ -31,9 +31,15 @@ const CodewordChallenge = () => {
 
   const handleChange = (index, value) => {
     const newInputs = [...userInput];
+    const char = value.slice(-1).toUpperCase();
     // Take only the last character entered and make it uppercase
-    newInputs[index] = value.slice(-1).toUpperCase();
+    newInputs[index] = char;
     setUserInput(newInputs);
+
+    // If a character was entered and there is a next input, focus it
+    if (char && index < targetWord.length - 1) {
+      inputRefs.current[index + 1].focus();
+    }
   };
 
   const isSolved = userInput.join("") === targetWord;
@@ -80,11 +86,20 @@ const CodewordChallenge = () => {
           <div key={index} className="flex items-center space-x-4">
             {/* Input Box */}
             <input
+              key={index}
               type="text"
               maxLength="1"
+              // Assign the ref to the array
+              ref={(el) => (inputRefs.current[index] = el)}
               value={userInput[index]}
               onChange={(e) => handleChange(index, e.target.value)}
-              className="w-12 h-12 text-center text-xl font-bold border-2 border-gray-300 rounded-lg focus:border-red-400 focus:ring-2 focus:ring-red-400 outline-none transition-all uppercase"
+              className={`w-12 h-12 text-center text-xl font-bold border-2 rounded-lg ...`}
+              // Optional: move back on backspace
+              onKeyDown={(e) => {
+                if (e.key === "Backspace" && !userInput[index] && index > 0) {
+                  inputRefs.current[index - 1].focus();
+                }
+              }}
             />
 
             {/* Clue Text */}
