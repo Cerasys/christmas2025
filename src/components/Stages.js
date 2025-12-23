@@ -1,4 +1,4 @@
-export const FINAL_VIDEO_ID = "FINAL_VIDEO_ID";
+export const FINAL_VIDEO_ID = "PVsvSsABQZ4";
 
 export const STAGES = [
   {
@@ -16,7 +16,7 @@ export const STAGES = [
     videoId: "JZZRbn8erAk",
     hint: {
       type: "text",
-      content: "Your Animal Friends are Stuffed Within a Box...",
+      content: "Your Friendly Animals are Stuffed (Within a Box)...",
     },
   },
   {
@@ -26,7 +26,7 @@ export const STAGES = [
     hint: {
       type: "text",
       content:
-        "Where do you keep this main ingredient of this dish? https://www.allrecipes.com/recipe/13107/miso-soup/",
+        "It's in the freezer? https://www.allrecipes.com/recipe/13107/miso-soup/",
     },
   },
   {
@@ -35,32 +35,32 @@ export const STAGES = [
     videoId: "Ja-Yb9ChicA",
     hint: {
       type: "text",
-      content: "Go to your stovetop and look up",
+      content: "Go to where you cook and look up lol",
     },
   },
   {
     id: 5,
     code: "genki",
-    videoId: "VIDEO_ID_5",
+    videoId: "0LWDIS9lM8A",
     hint: {
       type: "text",
-      content: "It might be behind this 'Bulldogs' themed emotion chart?",
+      content: "It might be behind a 'Bulldogs' themed emotion chart?",
     },
   },
   {
     id: 6,
     code: "girl",
-    videoId: "VIDEO_ID_6",
+    videoId: "Cg25-XI9pac",
     hint: {
       type: "text",
       content:
-        "https://www.health.harvard.edu/blog/why-teenagers-eat-tide-pods-2018013013241",
+        "The couterpart to this machine is a Laundry Dryer ...and you might need to look behind it ;)",
     },
   },
   {
     id: 7,
     code: "engaged",
-    videoId: "VIDEO_ID_7",
+    videoId: "R2wa6P4soK0",
     hint: {
       type: "text",
       content: "The code is 'ENGAGED'",
@@ -69,10 +69,11 @@ export const STAGES = [
   {
     id: 8,
     code: "done",
-    videoId: "VIDEO_ID_8",
+    videoId: "GvzwtYyG8nY",
     hint: {
       type: "text",
-      content: "How would you swap a photo out of its frame?",
+      content:
+        "Look inside!!!!!!!!!!!!!! https://photos.app.goo.gl/PE6KNDSZBDYJoLEb6",
     },
   },
 ];
