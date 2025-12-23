@@ -136,6 +136,7 @@ export default function ScavengerHunt() {
                           <iframe
                             className="absolute top-0 left-0 w-full h-full"
                             src={`https://www.youtube.com/embed/${stage.hint.videoId}`}
+                            title={`Hint ${stage.id} Video`}
                             allowFullScreen
                           ></iframe>
                         </div>
